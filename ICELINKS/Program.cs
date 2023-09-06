@@ -10,7 +10,7 @@ public class AppConfig
 }
 
 
-internal class Input
+internal class Program
 {
     [DllImport("kernel32.dll")]
     static extern IntPtr GetConsoleWindow();
