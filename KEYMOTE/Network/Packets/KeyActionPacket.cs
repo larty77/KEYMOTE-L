@@ -69,7 +69,7 @@ public class KeyActionPacket : Packet
     { "k", VirtualKeyCode.VK_K },
     { "l", VirtualKeyCode.VK_L },
     { "semicolon", VirtualKeyCode.OEM_1 },
-    { "paws", VirtualKeyCode.PAUSE },
+    { "paws", VirtualKeyCode.OEM_7 },
     { "backslash", VirtualKeyCode.OEM_5 },
     { "enter", VirtualKeyCode.RETURN },
     { "lshift", VirtualKeyCode.LSHIFT },
