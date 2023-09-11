@@ -27,12 +27,12 @@ internal class Program
         try
         {
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string configPath = Path.Combine(baseDirectory, "config.json");         
+            string configPath = Path.Combine(baseDirectory, "config.json");
             string configJson = File.ReadAllText(configPath);
 
             config = JsonConvert.DeserializeObject<AppConfig>(configJson)!;
         }
-        catch 
+        catch
         {
             config.Port = 0;
             config.ShowConsole = true;
@@ -46,8 +46,21 @@ internal class Program
         new Network(config.Port);
 
         new KeyActionHandler();
-      
-        WriteLine($"\nFound addresses on this PC:\n\t{string.Join<IPAddress>("\t\n\t", Dns.GetHostAddresses(Dns.GetHostName()).Where(x => x.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork))}", ConsoleColor.White);
+
+
+
+        WriteLine($"\n======================", ConsoleColor.White);
+        foreach (var address in Dns.GetHostAddresses(Dns.GetHostName()).Where(x => x.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork))
+        {
+            WriteLine($"{address}:{Network.Instance.Port}", ConsoleColor.Yellow);
+        }
+        WriteLine($"======================\n", ConsoleColor.White);        
+        
+        Write($"Everything is great. The server is fully ready to accept connections. On the mobile device you need to enter one of the sockets found (they are highlighted in ", ConsoleColor.White);
+        Write($"yellow".ToUpper(), ConsoleColor.Yellow);
+        Write($")\n", ConsoleColor.White);
+
+        WriteLine("", ConsoleColor.White);
 
         Console.ReadLine();
     }
