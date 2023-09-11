@@ -24,6 +24,8 @@ class Network
         }
     }
 
+    public int Port => _server!.LocalEndPoint!.Port;
+
     public static Network Instance
     {
 
