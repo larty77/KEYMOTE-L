@@ -101,7 +101,27 @@ public class KeyActionPacket : Packet
     { "left", VirtualKeyCode.LEFT },
     { "down", VirtualKeyCode.DOWN },
     { "right", VirtualKeyCode.RIGHT },
-    { "up", VirtualKeyCode.UP }
+    { "up", VirtualKeyCode.UP },
+
+    //NUM
+
+    { "num_0", VirtualKeyCode.NUMPAD0 },
+    { "num_1", VirtualKeyCode.NUMPAD1 },
+    { "num_2", VirtualKeyCode.NUMPAD2 },
+    { "num_3", VirtualKeyCode.NUMPAD3 },
+    { "num_4", VirtualKeyCode.NUMPAD4 },
+    { "num_5", VirtualKeyCode.NUMPAD5 },
+    { "num_6", VirtualKeyCode.NUMPAD6 },
+    { "num_7", VirtualKeyCode.NUMPAD7 },
+    { "num_8", VirtualKeyCode.NUMPAD8 },
+    { "num_9", VirtualKeyCode.NUMPAD9 },
+    { "num_dot", VirtualKeyCode.DECIMAL },
+    { "num_enter", VirtualKeyCode.RETURN },
+    { "num_minus", VirtualKeyCode.SUBTRACT },
+    { "num_plus", VirtualKeyCode.ADD },
+    { "num_lock", VirtualKeyCode.NUMLOCK },
+    { "num_multiply", VirtualKeyCode.MULTIPLY },
+    { "num_slash", VirtualKeyCode.DIVIDE }
     };
 
     protected override void Read(ref Data data)
